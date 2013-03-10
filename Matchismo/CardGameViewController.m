@@ -68,5 +68,12 @@
     self.flipCount++;
     [self updateUI];
 }
+- (IBAction)deal:(id)sender {
+    CardMatchingGame *newGame = [[CardMatchingGame alloc]initWithCardCount:self.cardButtons.count usingDeck:[[PlayingCardDeck alloc]init]];
+    self.game = newGame;
+    self.flipCount = 0;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+    [self updateUI];
+}
 
 @end
