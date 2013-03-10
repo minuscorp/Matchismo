@@ -34,7 +34,7 @@
             for(Card *otherCard in self.cards){
                 mismatchPair = YES;
                 if (otherCard.isFaceUp && !otherCard.isUnplayable) {
-                    int matchScore = [card match:@[otherCard]];
+                    int matchScore = [card match:@[otherCard] andGameMode:0];
                     if(matchScore){
                         card.unplayable = YES;
                         otherCard.unplayable = YES;
@@ -56,7 +56,6 @@
         card.faceUp = !card.isFaceUp;
     }
 }
-
 -(Card *)cardAtIndex:(NSUInteger)index{
     return (index < [self.cards count]) ? self.cards[index] : nil;
 }

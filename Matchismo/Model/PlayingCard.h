@@ -16,5 +16,6 @@
 +(NSArray *)validSuits;
 +(NSArray *)rankStrings;
 +(NSUInteger)maxRank;
+//-(int) match:(NSArray *)otherCards andGameMode:(NSUInteger)mode;
 
 @end

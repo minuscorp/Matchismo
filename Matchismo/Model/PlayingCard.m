@@ -49,20 +49,20 @@
     NSArray *rankStrings = [PlayingCard rankStrings];
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }*/
--(int) match:(NSArray *)otherCards{
+-(int) match:(NSArray *)otherCards andGameMode:(NSUInteger)mode{
     int score = 0;
     
-    if ([otherCards count]==1) {
+    if ([otherCards count]==1 && mode == 0) {
         PlayingCard *otherCard = [otherCards lastObject];
         if ([otherCard.suit isEqualToString:self.suit]) {
             score = 1;
         }else if(otherCard.rank == self.rank){
             score = 4;
         }
-    }else if ([otherCards count]== 2){
+    }else if ([otherCards count]== 2 && mode == 1){
         PlayingCard *firstOtherCard = [otherCards objectAtIndex:0];
         PlayingCard *secondOtherCard = [otherCards objectAtIndex:1];
-        if ([firstOtherCard.suit isEqualToString:self.suit]) {
+        if ([firstOtherCard.suit isEqualToString:self.suit] && [secondOtherCard.suit isEqualToString:self.suit]) {
             score = 2;
         }else if ((firstOtherCard.rank == self.rank) && (secondOtherCard.rank == self.rank)){
             score = 8;

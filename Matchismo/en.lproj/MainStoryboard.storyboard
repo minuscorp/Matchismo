@@ -304,11 +304,23 @@
                                     <action selector="deal:" destination="2" eventType="touchUpInside" id="cVG-zb-eX4"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="OyM-7g-1X8">
+                                <rect key="frame" x="92" y="409" width="149" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="2-card"/>
+                                    <segment title="3-card"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeGameMode:" destination="2" eventType="valueChanged" id="6wv-9o-njm"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="flipsLabel" destination="4dh-bL-tbZ" id="HWe-di-z3p"/>
+                        <outlet property="gameMode" destination="OyM-7g-1X8" id="L49-1W-6lj"/>
                         <outlet property="resultLabel" destination="5sP-i4-f0r" id="vM9-wh-hMD"/>
                         <outlet property="scoreLabel" destination="wnk-uG-RiT" id="pEG-20-MgP"/>
                         <outletCollection property="cardButtons" destination="cDc-EU-els" id="NXy-1g-n7v"/>
@@ -334,19 +346,6 @@
             <point key="canvasLocation" x="34" y="71"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CardGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardGameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="deal:"/>
-                <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
