@@ -17,6 +17,7 @@
 //@property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 @end
 
@@ -53,6 +54,7 @@
         cardButton.alpha = (card.isUnplayable ? 0.3 : 1.0);
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", _game.score];
+    self.resultLabel.text = _game.result;
 }
 
 -(void)setFlipCount:(int)flipCount{
