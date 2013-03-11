@@ -23,6 +23,7 @@
 		CFC677D516EA19F700B125A5 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC677D416EA19F700B125A5 /* Deck.m */; };
 		CFC677DC16EA708D00B125A5 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC677DB16EA708D00B125A5 /* PlayingCard.m */; };
 		CFC677DF16EB4D5200B125A5 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC677DE16EB4D5200B125A5 /* PlayingCardDeck.m */; };
+		CFD0459B16EE5C74004C2D8C /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFD0459A16EE5C74004C2D8C /* back.jpg */; };
 		CFEF96FD16EB962300FAC623 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF96FC16EB962300FAC623 /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		CFC677DB16EA708D00B125A5 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 		CFC677DD16EB4D5200B125A5 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		CFC677DE16EB4D5200B125A5 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		CFD0459A16EE5C74004C2D8C /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		CFEF96FB16EB962300FAC623 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		CFEF96FC16EB962300FAC623 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 				CFC677DE16EB4D5200B125A5 /* PlayingCardDeck.m */,
 				CFC677D316EA19F700B125A5 /* Deck.h */,
 				CFC677D416EA19F700B125A5 /* Deck.m */,
+				CFD0459A16EE5C74004C2D8C /* back.jpg */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				CFBF9A3216EA0EDB005DC167 /* Default@2x.png in Resources */,
 				CFBF9A3416EA0EDB005DC167 /* Default-568h@2x.png in Resources */,
 				CFBF9A3716EA0EDB005DC167 /* MainStoryboard.storyboard in Resources */,
+				CFD0459B16EE5C74004C2D8C /* back.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

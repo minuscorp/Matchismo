@@ -50,9 +50,14 @@
 }
 
 -(void)updateUI{
+    UIImage *cardBackImage = [UIImage imageNamed:@"back.jpg"];
+    UIImage *cardFrontImage = [UIImage alloc];
     if(_gameMode.selectedSegmentIndex==0){
         for(UIButton *cardButton in self.cardButtons){
             Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
+            [cardButton setImage:cardBackImage forState:UIControlStateNormal];
+            [cardButton setImage:cardFrontImage forState:UIControlStateSelected];
+            [cardButton setImage:cardFrontImage forState:UIControlStateDisabled|UIControlStateSelected];
             [cardButton setTitle:card.contents forState:UIControlStateSelected];
             [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
 
@@ -65,6 +70,9 @@
     }else{
         for(UIButton *cardButton in self.cardButtons){
             Card *card = [self.threeGame cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
+            [cardButton setImage:cardBackImage forState:UIControlStateNormal];
+            [cardButton setImage:cardFrontImage forState:UIControlStateSelected];
+            [cardButton setImage:cardFrontImage forState:UIControlStateDisabled|UIControlStateSelected];
             [cardButton setTitle:card.contents forState:UIControlStateSelected];
             [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
             
