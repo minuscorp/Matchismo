@@ -10,6 +10,7 @@
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 #import "ThreeCardMatchingGame.h"
+#import "GameResult.h"
 
 @interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -21,10 +22,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameMode;
+@property (strong, nonatomic) GameResult *gameResult;
 
 @end
 
 @implementation CardGameViewController
+
+-(GameResult *)gameResult{
+    if(!_gameResult) _gameResult = [[GameResult alloc] init];
+    return _gameResult;
+}
 
 -(CardMatchingGame *)game{
     if(!_game) _game = [[CardMatchingGame alloc]initWithCardCount:[self.cardButtons count ] usingDeck:[[PlayingCardDeck alloc]init]];
@@ -101,9 +108,15 @@
     }
     self.flipCount++;
     [self updateUI];
+    if(_gameMode.selectedSegmentIndex == 0){
+        self.gameResult.score = self.game.score;
+    }else{
+        self.gameResult.score = self.threeGame.score;
+    }
+    
 }
 - (IBAction)deal:(id)sender {
-    if (_gameMode.selectedSegmentIndex ==0) {
+    /*if (_gameMode.selectedSegmentIndex ==0) {
         CardMatchingGame *newGame = [[CardMatchingGame alloc]initWithCardCount:self.cardButtons.count usingDeck:[[PlayingCardDeck alloc]init]];
         self.game = newGame;
         self.flipCount = 0;
@@ -113,7 +126,15 @@
         self.threeGame = newGame;
         self.flipCount = 0;
         self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+    }*/
+    if (_gameMode.selectedSegmentIndex == 0) {
+        self.game = nil;
+        
+    }else{
+        self.threeGame = nil;
     }
+    self.gameResult = nil;
+    self.flipCount = 0;
     [self updateUI];
 }
 - (IBAction)changeGameMode:(id)sender {
