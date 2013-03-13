@@ -11,6 +11,7 @@
 		CF5199B016F0E1DA004EA12D /* games_card_spades.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5199AF16F0E1DA004EA12D /* games_card_spades.png */; };
 		CF5199B316F0E37A004EA12D /* GameResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5199B216F0E37A004EA12D /* GameResultsViewController.m */; };
 		CF5199B616F0E557004EA12D /* GameResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5199B516F0E557004EA12D /* GameResult.m */; };
+		CF5199D416F10357004EA12D /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5199D316F10357004EA12D /* stats.png */; };
 		CFBF9A1E16EA0EDB005DC167 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBF9A1D16EA0EDB005DC167 /* UIKit.framework */; };
 		CFBF9A2016EA0EDB005DC167 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBF9A1F16EA0EDB005DC167 /* Foundation.framework */; };
 		CFBF9A2216EA0EDB005DC167 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBF9A2116EA0EDB005DC167 /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 		CF5199B216F0E37A004EA12D /* GameResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultsViewController.m; sourceTree = "<group>"; };
 		CF5199B416F0E557004EA12D /* GameResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResult.h; sourceTree = "<group>"; };
 		CF5199B516F0E557004EA12D /* GameResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResult.m; sourceTree = "<group>"; };
+		CF5199D316F10357004EA12D /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stats.png; path = Matchismo/stats.png; sourceTree = "<group>"; };
 		CFBF9A1A16EA0EDB005DC167 /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBF9A1D16EA0EDB005DC167 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CFBF9A1F16EA0EDB005DC167 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +86,7 @@
 		CFBF9A1116EA0EDB005DC167 = {
 			isa = PBXGroup;
 			children = (
+				CF5199D316F10357004EA12D /* stats.png */,
 				CFBF9A2316EA0EDB005DC167 /* Matchismo */,
 				CFBF9A1C16EA0EDB005DC167 /* Frameworks */,
 				CFBF9A1B16EA0EDB005DC167 /* Products */,
@@ -220,6 +223,7 @@
 				CFBF9A3716EA0EDB005DC167 /* MainStoryboard.storyboard in Resources */,
 				CFD0459B16EE5C74004C2D8C /* back.jpg in Resources */,
 				CF5199B016F0E1DA004EA12D /* games_card_spades.png in Resources */,
+				CF5199D416F10357004EA12D /* stats.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

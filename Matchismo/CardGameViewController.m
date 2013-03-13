@@ -53,6 +53,9 @@
         Card * card = [self.deck drawRandomCard];
         [cardButtons setTitle:card.contents forState:UIControlStateSelected];
     }*/
+    for (UIButton *button in cardButtons) {
+        button.imageEdgeInsets = UIEdgeInsetsMake(2.5, 2.5, 2.5, 2.5);
+    }
     [self updateUI];
 }
 
@@ -90,7 +93,6 @@
         self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", _threeGame.score];
         self.resultLabel.text = _threeGame.result;
     }
-
 }
 
 -(void)setFlipCount:(int)flipCount{
